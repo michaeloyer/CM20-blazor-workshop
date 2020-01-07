@@ -6,16 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Watch Include="..\**\*.razor" ></Watch>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="$(AspNetCoreVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="$(BlazorVersion)" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="$(AspNetCoreVersion)" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(EntityFrameworkVersion)" />
-    <PackageReference Include="WebPush" Version="1.0.11" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BlazingPizza.Client\BlazingPizza.Client.csproj" />
-    <ProjectReference Include="..\BlazingPizza.Shared\BlazingPizza.Shared.csproj" />
+    <ProjectReference Include="..\BlazingPizza.Client\BlazingPizza.Client.csproj" Watch="True" />
+    <ProjectReference Include="..\BlazingPizza.Shared\BlazingPizza.Shared.csproj" Watch="True" />
   </ItemGroup>
 
 </Project>
